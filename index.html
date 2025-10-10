@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Rahmat Eka</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="rahmat.jpg" alt="Logo" class="logo-icon">
+            <span>MatsPorto</span>
+        </div>
+        <nav>
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#service">SERVICE</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>HELLO, I'M RAHMAT EKA</h1>
+        <p class="subtitle">A DEVELOPER & CREATIVE DESAINER</p>
+        <a href="https://wa.me/6289514509392?text=Hallo%20saya%20ingin%20berkolaborasi" class="btn-primary">LET’S COLLABORATE</a>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-me-box">
+                <div class="profile-photo">
+                    <img src="RAHMATT.jpg" alt="Rahmat Eka" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">ABOUT ME</h2>
+                    <p>I am Rahmat Eka Satria, a developer focused on web and software application development, with the ability to build functional and user-friendly solutions.</p>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h2 class="section-title2">ACHIEVEMENTS</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-item"><img src="cr1.jpg" alt="Certificate 1"></div>
+                    <div class="certificate-item"><img src="cr2.jpg" alt="Certificate 2"></div>
+                    <div class="certificate-item"><img src="cr3.jpg" alt="Certificate 3"></div>
+                    <div class="certificate-item"><img src="cr4.jpg" alt="Certificate 4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">MY SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-cube icon"></i>
+                    <p>WEB3 DEVELOPER</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-drafting-compass icon"></i>
+                    <p>UI/UX DESIGN</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-laptop-code icon"></i>
+                    <p>WEB DEVELOPER</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-globe icon"></i>
+                    <p>CLOUD COMPUTING</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <h2 class="section-title">LE'TS CONNECT</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/rhmteka._"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rahmatekasatria/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/rhmatzeka"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/rahmateka1922?t=pC4wePwo4sRL8QjEvJ0u5A&s=09"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section, footer');
+
+    window.addEventListener('scroll', () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100; 
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
