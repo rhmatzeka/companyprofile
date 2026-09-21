@@ -18,3 +18,7 @@ HTML and CSS, with Font Awesome icons and the Roboto font.
 ## Run it
 
 Open `index.html` in your browser.
+
+## License
+
+Released under the [MIT License](LICENSE).
